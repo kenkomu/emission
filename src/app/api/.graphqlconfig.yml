@@ -1,0 +1,18 @@
+projects:
+  demoapi:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src/graphql
+        region: us-east-2
+        apiId: yiikgywvhnhirbay5gul6o7nva
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3

@@ -1,0 +1,248 @@
+
+:root {
+    --purple: #490ba7dd; /* Green: Use this for primary elements, buttons, etc. */
+    --orange: #FF5733; /* Orange: Use this for accents or highlights */
+    --text-color: #000000; /* Dark gray: Use this for most text content */
+    --dark: #211c1c; /* Light gray: Use this for background elements */
+    --border-color: #D1D1D1; /* Border color for separating elements */
+    --chart-color: #337ab7; /* Chart color for the line chart */
+    --silver: #909090;
+    --light-green: #64cf72;
+    --blue: #040D12;
+    --light-blue: #08dce3;
+    --pure-white: #5e0f0f;
+    --pure-blue: rgb(247, 243, 10), 164, 164;
+    --white: #ffffff;
+    --green:#183D3D; 
+ }
+  
+ 
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ 
+ }
+ 
+ body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 120vh;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+ }
+ 
+ .container {
+   width: 400px;
+   height: 105vh;
+   background-color: var(--green);
+   border-radius: 20px;
+   /* box-shadow:  0.5px 1px 1px 1px var(--text-color); */
+   border: #000000;
+   /* border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   border-bottom-left-radius: 20px;
+   border-bottom-left-radius: 20px; */
+ 
+ 
+  
+ } 
+ .header {
+   font-family: monospace;
+   color: var(--blue);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.5s ease; /* This will smooth out the transition between normal and hover states */
+ }
+ 
+ .header:hover {
+   transform: scale(1.1); /* This will make the header grow when hovered over */
+   color: var(--text-color); /* This will change the color of the text when hovered over */
+ }
+ 
+ 
+ 
+ .timestamp {
+   color: var(--white);
+   font-size: 1em;
+   text-align: center;
+   font-weight: 900;
+   width: 100%;
+   height: 15vh;
+   background-color: var(--blue);
+   border-radius: 20px;
+   box-shadow:   1px 1px  var(--text-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   animation: fadeIn 2s ease-in-out;
+  
+     
+ }
+ 
+ 
+ hr {
+   border: none;
+   border-top: 1.4px solid var(--white);
+   width: 95%; /* This will make the hr 3/4 the length of its container */
+   margin: auto; /* This will center the hr */
+ }
+ 
+ 
+ .upper-data {
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   width: 100%;
+   height: 40%;
+   /* border-top-left-radius: 20px;
+   border-top-right-radius: 20px; */
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   
+ 
+ }
+ .sensor-data {
+   position: relative;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+ 
+ }
+ 
+ 
+ 
+ .carbon-data {
+   color: var(--white);
+   font-size: 1.5em;
+   text-align: center;
+   font-weight: 350;
+   width: 200px;
+   height: 5vh;
+   background-color: var(--blue);
+   border-radius: 10px;
+   box-shadow:   1px 1px 5px 1px var(--text-color);
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   margin-bottom: 10px;
+   margin-left: 100px;
+   margin-right: 40px;
+   margin-top: 20px;
+   position: absolute;
+   bottom: 0;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+ 
+ }
+ .carbon-data:hover, .methane-data:hover {
+   /* Add your hover styles here, for example: */
+   transform: scale(1.1);
+   transition: transform 0.3s ease-in-out;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .carbon-plot {
+   border-radius: 0%;
+   width: 350px;
+   height: 30vh;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   margin-bottom: 45px;
+   margin-right: 40px;
+   margin-left: 40px; 
+   box-shadow:   1px 1px 5px 1px var(--text-color);
+ }
+ 
+ .lower-data {
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   width: 100%;
+   height: 45%;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   
+ 
+ }
+ .meth-data {
+   position: relative;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   /* background-color: var(--green); */
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+ 
+ }
+ .methane-data {
+   color: var(--white);
+   font-size: 1.5em;
+   text-align: center;
+   font-weight: 350;
+   width: 200px;
+   height: 5vh;
+   background-color: var(--blue);
+   border-radius: 10px;
+   box-shadow:   1px 1px 5px 1px var(--text-color);
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   margin-bottom: 30px;
+   margin-left: 100px;
+   /* margin-right: 40px; */
+   margin-top: 20px;
+   position: absolute;
+   bottom: 0;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+ 
+  
+ 
+ }
+ 
+ .methane-plot {
+   border-radius: 0%;
+   width: 350px;
+   height: 30vh;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   margin-bottom: 45px;
+   margin-right: 40px;
+   margin-left: 40px;
+   box-shadow:   1px 1px 5px 1px var(--text-color);
+ }
+ .carbon-plot:hover {
+   transform: scale(1.1);/* This will animate the transform property over 0.3 seconds */
+   transition: transform 0.9s ease-in-out;
+ }
+ 
+ .methane-plot:hover {
+   transform: scale(1.1); /* This will increase the size of the donut plot to 110% when hovered */
+   transition: transform 0.9s ease-in-out;
+ }
+ 

@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-emissioninsight-dev-153643-authRole",
+      "UnauthRoleArn": "arn:aws:iam::289522552308:role/amplify-emissioninsight-dev-153643-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::289522552308:role/amplify-emissioninsight-dev-153643-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-emissioninsight-dev-153643-deployment",
+      "UnauthRoleName": "amplify-emissioninsight-dev-153643-unauthRole",
+      "StackName": "amplify-emissioninsight-dev-153643",
+      "StackId": "arn:aws:cloudformation:us-east-2:289522552308:stack/amplify-emissioninsight-dev-153643/d6ce2d00-6ce9-11ee-b04f-02429ab63bfb",
+      "AmplifyAppId": "d1wnfmz1bibp5d"
+    }
+  }
+}
